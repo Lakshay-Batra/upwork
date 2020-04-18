@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
+hr.green {
+    width: 10%;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 0.8rem;
+    border-color: peru;
+}
+.welcome-title {
+    /*min-height: 300px;*/
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    background: url(images/header-background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 7% 0 7% 3%;
+}
+.green {
+    color: limegreen;
+    line-height: 1.5;
+}
+@media (max-width: 700px) {
+    h1 {
+      font-size: medium;
+    }
+    h6 {
+        font-size: small;
+    }
+  }
