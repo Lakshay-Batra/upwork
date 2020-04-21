@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body style="background-color: #f4f4f4;">
+
+    <!-- side navigation or off-canvas Menu -->
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Expertise</a>
+        <a href="#">Expertise Level</a>
+        <a href="#">Education</a>
+        <a href="#">Employment</a>
+        <a href="#">Languages</a>
+        <a href="#">Hourly Rate</a>
+        <a href="#">Title & Overview</a>
+        <a href="#">Employment</a>
+        <a href="">Profile Photo</a>
+        <a href="#">Location</a>
+        <a href="#">Phone</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <div class="option-logo" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <div class="card" style="text-align: left;">
+                    <div class="card-header">
+                        1 of 10
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Expertise</h5>
+                        <p class="card-text">Tell us about the work you do</p>
+                        <p class="card-text"><b>What is the main service you offer?</b></p>
+                        <p class="card-text"><select class="custom-select" name="" id="">
+                                <option value="">Please Select</option>
+                                <option value="Accounting & Consulting">Accounting & Consulting</option>
+                                <option value="Admin Support">Admin Support</option>
+                                <option value="Customer Service">Customer Service</option>
+                                <option value="Data Science and Analytics">Data Science and Analytics</option>
+                                <option value="Design & Creative">Design & Creative</option>
+                                <option value="Engineering & Architecture">Engineering & Architecture</option>
+                                <option value="IT & Networking">IT & Networking</option>
+                                <option value="Legal">Legal</option>
+                                <option value="Sales & Marketing">Sales & Marketing</option>
+                                <option value="Transiation">Transiation</option>
+                                <option value="Web & Mobile Development">Web & Mobile Development</option>
+                                <option value="Writing">Writing</option>
+                            </select></p>
+                        <p><b>What skills do you offer clients?</b></p>
+                        <div style="text-align: right;">
+                            <input type="text" class="form-control"
+                                placeholder="Write all skills you offer separated by spaces">
+                            <span>Enter atleast 1 skill</span>
+                        </div>
+                        <div style="text-align: right; padding-top: 3%;">
+                            <a href="#" class="btn btn-primary">Next</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- side navigation or off-canvas Menu END -->
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="create-your-profile.js"></script>
+</body>
+
+</html>
