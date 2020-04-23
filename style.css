@@ -106,9 +106,10 @@ hr.green {
 }
 .option-logo {
     width: 38px;
-    background-color: grey;
+    background-color: whitesmoke;
     border-radius: 2px;
     padding: 1px 5px;
+    margin: 0.5% 0 0 0.5%;
 }
 .box {
     max-width: 400px;
@@ -118,71 +119,26 @@ hr.green {
     box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
-/* The side navigation menu */
-
-.sidenav {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #111;
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 60px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
-    text-align: left;
+/* create-your-profile */
+.create-your-profile-body {
+    background-color: #f7f7f7;
+    background-image: -webkit-linear-gradient(75deg, #323232 50%, #f7f7f7 50%);
+    margin: 0;
 }
 
-/* The navigation menu links */
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: medium;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+.heading {
+    padding: 2% 0;
+    margin: 0;
 }
-
-/* When you mouse over the navigation links, change their color */
-
-.sidenav a:hover {
-    color: #f1f1f1;
+.heading div {
+    background-color:rgb(46, 157, 248);
+    border-radius: 10px;
+    color: white;
 }
-
-/* Position and style the close button (top right corner) */
-
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+div.tab-content {
+    margin: 0;
 }
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
+.card-header {
+    background-color: rgb(46, 157, 248);
+    color: white;
 }
