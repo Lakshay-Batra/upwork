@@ -172,7 +172,59 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Employment</h5>
-                    <p class="card-text">...</p>
+                    <p class="card-text"><b>Add your past work experience</b></p>
+                    <p>Build your credebility by showcasing your the projects or jobs you have completed.</p>
+                    <div id="past-experience">
+
+                    </div><br>
+                    <p>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
+                            data-target="#exampleModalLong">
+                            + Add Employment
+                        </button>
+                    </p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header modal-header-success">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Employment</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        <b>Company</b>
+                                        <input id="company" type="text" class="form-control"
+                                            placeholder="name of company">
+                                    </p>
+                                    <p>
+                                        <b>Location</b>
+                                        <input type="text" class="form-control" placeholder="city">
+                                        <input type="text" class="form-control" placeholder="state">
+                                        <input type="text" class="form-control" placeholder="country">
+                                    </p>
+                                    <p>
+                                        <b>Title</b>
+                                        <input type="text" name="" id="past-title" class="form-control"
+                                            placeholder="job title">
+                                    </p>
+                                    <p>
+                                        <b>Description</b>
+                                        <textarea class="form-control" name="" id="" cols="60" rows="5"></textarea>
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button id="save-btn-past-experience" type="button"
+                                        class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div style="text-align: right; padding-top: 3%;">
                         <a href="#" class="btn btn-primary">Next</a>
                     </div>
