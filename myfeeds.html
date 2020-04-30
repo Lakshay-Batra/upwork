@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Feed</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
+
+    <style>
+        .container {
+            padding-top: 1%;
+        }
+
+        .top-header {
+            border-radius: 110px 0 110px 0;
+            padding: 0.5% 10%;
+            margin-bottom: 1%;
+        }
+
+        .top-header a {
+            color: white;
+        }
+
+        .tab-content .card-header {
+            border-radius: 50px;
+        }
+        .card:hover {
+            background-color: rgb(242, 247, 246);
+        }
+    </style>
+</head>
+
+<body class="bg-light text-left">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292b2c;">
+        <a class="navbar-brand" style="color: teal; font-weight: bold;" href="#"><img src="images/iniesta-logo.jpg"
+                alt="iniesta-logo" style="border-radius: 5px;"> INIESTA Freelancing</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link">Find Work</a>
+                </li>
+                <li class="nav-item dropdown trainings">
+                    <a href="" class="nav-link">My Jobs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="">Messages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link">My Profile &nbsp; <img class="feed-profile-logo"
+                            src="images/feed-profile-logo.jpg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="top-header bg-dark text-light text-center">
+            <h1>Find Work</h1>
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">My Feeds</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Recommended</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content" id="myTabContent">
+        <!------------------------------------------ my feed ----------------------------------------->
+        <div class="tab-pane fade show active container" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row justify-content-md-center mb-3">
+                <div class="col-md-8">
+                    <div class="card-header bg-dark text-center">
+                        My Feed
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Company's Name</h5>
+                            <p>Fixed Price - Expert - Est. Budget $500 - Posted 13 minutes ago</p>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, magnam blanditiis.
+                                Repellendus vitae ipsum laudantium. Cum veritatis placeat ullam non rerum quaerat modi
+                                est nesciunt at, fugit quod! Rerum, perferendis.
+                            </p>
+                            <p>Proposals: Less than 5</p>
+                            <p><i class="fas fa-map-marker-alt"></i> India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------ recommended ----------------------------------------->
+        <div class="tab-pane fade container" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row justify-content-md-center mb-3">
+                <div class="col-md-8">
+                    <div class="card-header bg-dark text-center">
+                        Recommended
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-8">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Company's Name</h5>
+                            <p>Fixed Price - Expert - Est. Budget $500 - Posted 13 minutes ago</p>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, magnam blanditiis.
+                                Repellendus vitae ipsum laudantium. Cum veritatis placeat ullam non rerum quaerat modi
+                                est nesciunt at, fugit quod! Rerum, perferendis.
+                            </p>
+                            <p>Proposals: Less than 5</p>
+                            <p><i class="fas fa-map-marker-alt"></i> India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

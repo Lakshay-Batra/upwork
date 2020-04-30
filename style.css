@@ -104,6 +104,7 @@ hr.green {
 .option-logo:hover {
     cursor: pointer;
 }
+
 .option-logo {
     width: 38px;
     background-color: whitesmoke;
@@ -111,6 +112,7 @@ hr.green {
     padding: 1px 5px;
     margin: 0.5% 0 0 0.5%;
 }
+
 .box {
     max-width: 400px;
     margin: 50px auto;
@@ -120,6 +122,7 @@ hr.green {
 }
 
 /* create-your-profile */
+
 .create-your-profile-body {
     background-color: #f7f7f7;
     background-image: -webkit-linear-gradient(75deg, #323232 50%, #f7f7f7 50%);
@@ -130,28 +133,39 @@ hr.green {
     padding: 2% 0;
     margin: 0;
 }
+
 .heading div {
-    background-color:rgb(46, 157, 248);
+    background-color: rgb(46, 157, 248);
     border-radius: 10px;
     color: white;
 }
+
 div.tab-content {
     margin: 0;
 }
+
 .card-header {
     background-color: rgb(46, 157, 248);
     color: white;
 }
+
 .modal-header {
     background-color: rgb(46, 157, 248);
     color: white;
 }
+
 .profile-photo-container {
     width: 200px;
     height: 200px;
-    
 }
+
 .profile-photo-container img {
     width: 100%;
+    border-radius: 50%;
+}
+
+/******************************************** my feeds *****************************************************/
+
+.feed-profile-logo {
     border-radius: 50%;
 }
