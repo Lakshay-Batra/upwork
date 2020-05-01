@@ -41,7 +41,7 @@ if(isset($_POST['signin']))
 	{
 		$_SESSION['firstname'] = $db_firstname;
 		$_SESSION['id'] = $db_id;
-		header("Location: create-your-profile.php");
+		header("Location: create.php");
 	}
 	else
 	{
