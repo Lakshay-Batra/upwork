@@ -41,11 +41,7 @@ if(isset($_POST['signin']))
 	{
 		$_SESSION['firstname'] = $db_firstname;
 		$_SESSION['id'] = $db_id;
-<<<<<<< HEAD
 		header("Location: create.php");
-=======
-		header("Location: create-your-profile.php");
->>>>>>> master
 	}
 	else
 	{
@@ -75,19 +71,25 @@ if(isset($_POST['signin']))
 	<link href="style.css" rel="stylesheet">
 
 	<script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-	<script lang="javascript" type="text/javascript">
-	window.history.forward();
-	</script>
-=======
->>>>>>> backend
->>>>>>> master
 
 </head>
 
 <body>
+
+<style>
+.fa-info-circle {
+	color: black;
+	float: right;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	font-size: 1.2em;
+	border-color: black transparent transparent transparent;
+}	
+	
+</style>
+
+
 
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292b2c;">
 		<a class="navbar-brand" style="font-size:x-large; color: limegreen;" href="#"><i class="fas fa-level-up-alt"></i> work</a>
@@ -115,7 +117,7 @@ if(isset($_POST['signin']))
 			</ul>
 		</div>
 	</nav>
-
+	
 
 	<!-- Login modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -129,10 +131,15 @@ if(isset($_POST['signin']))
 				</div>
 				<form action="index.php" method="post">
 					<div class="modal-body">
-						<input type="text" class="form-control" placeholder="Username" name="username" required><br>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Username" name="username" required><a href="#" onclick="return false" data-toggle="tooltip" title="Username is your Email Id which you provided at the time of registeration"><i class="fas fa-info-circle"></i></a>
+					</div>
+					<div class="form-group">
 						<input type="password" class="form-control" placeholder="Password" name="password" required>
+						
+						</div>
 						<div style="text-align: right;">
-							<a href="">Forget password?</a>
+							<a href="forgot.php?forgot=<?php echo uniqid(true); ?>">Forget password?</a>
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -153,19 +160,6 @@ if(isset($_POST['signin']))
 		<h6>Upwork expertly connects professionals and agencies to businesses seeking specialized talent.</h6>
 	</div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<style>
-	.card-body p{
-		color: black;
-	}
-</style>
-	<!-- <hr class="green"> -->
-	<div class="container-fluid body-section" style="padding-top: 4%;">
-	<?php //echo $count; ?>
-=======
->>>>>>> master
 	<style>
 		.card-body p {
 			color: black;
@@ -174,10 +168,6 @@ if(isset($_POST['signin']))
 	<!-- <hr class="green"> -->
 	<div class="container-fluid body-section" style="padding-top: 4%;">
 		<?php //echo $count; ?>
-<<<<<<< HEAD
-=======
->>>>>>> backend
->>>>>>> master
 		<h1 style="color: teal; text-shadow: 1px 1px 2px grey; line-height: 2;">Find quality talent and agencies</h1>
 		<div class="category-container row">
 			<div class="category-card col-md-3">
@@ -195,18 +185,8 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/Writing.png" class="card-img-top" alt="...">
 					<div class="card-body">
-<<<<<<< HEAD
 						<a href="register.php">
 							<p>Writing</p>
-=======
-<<<<<<< HEAD
-					<a href="register.php">
-						<p>Writing</p>
-=======
-						<a href="register.php">
-							<p>Writing</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -215,18 +195,8 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/Sales&Marketing.png" class="card-img-top" alt="...">
 					<div class="card-body">
-<<<<<<< HEAD
 						<a href="register.php">
 							<p>Sale & Marketing</p>
-=======
-<<<<<<< HEAD
-					<a href="register.php">
-						<p>Sale & Marketing</p>
-=======
-						<a href="register.php">
-							<p>Sale & Marketing</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -235,18 +205,8 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/Engineering&Architecture.png" class="card-img-top" alt="...">
 					<div class="card-body">
-<<<<<<< HEAD
 						<a href="register.php">
 							<p>Engineering & Architecture</p>
-=======
-<<<<<<< HEAD
-					<a href="register.php">
-						<p>Engineering & Architecture</p>
-=======
-						<a href="register.php">
-							<p>Engineering & Architecture</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -257,15 +217,7 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/Design&Creative.png" class="card-img-top" alt="...">
 					<div class="card-body"><a href="register.php">
-<<<<<<< HEAD
 							<p>Design & Creative</p>
-=======
-<<<<<<< HEAD
-						<p>Design & Creative</p>
-=======
-							<p>Design & Creative</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -274,15 +226,7 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/DataScience&Analytics.png" class="card-img-top" alt="...">
 					<div class="card-body"><a href="register.php">
-<<<<<<< HEAD
 							<p>DataScience & Analytics</p>
-=======
-<<<<<<< HEAD
-						<p>DataScience & Analytics</p>
-=======
-							<p>DataScience & Analytics</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -291,15 +235,7 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/CustomerService.png" class="card-img-top" alt="...">
 					<div class="card-body"><a href="register.php">
-<<<<<<< HEAD
 							<p>Customer Service</p>
-=======
-<<<<<<< HEAD
-						<p>Customer Service</p>
-=======
-							<p>Customer Service</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -308,15 +244,7 @@ if(isset($_POST['signin']))
 				<div class="card">
 					<img src="images/Admin Support.png" class="card-img-top" alt="...">
 					<div class="card-body"><a href="register.php">
-<<<<<<< HEAD
 							<p>Admin Support</p>
-=======
-<<<<<<< HEAD
-						<p>Admin Support</p>
-=======
-							<p>Admin Support</p>
->>>>>>> backend
->>>>>>> master
 						</a>
 					</div>
 				</div>
@@ -482,22 +410,19 @@ if(isset($_POST['signin']))
 		</div>
 	</div>
 
-<<<<<<< HEAD
 	<script lang="javascript" type="text/javascript">
 		window.history.forward();
 	</script>
-=======
-<<<<<<< HEAD
-=======
-	<script lang="javascript" type="text/javascript">
-		window.history.forward();
-	</script>
->>>>>>> backend
->>>>>>> master
 
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="index.js"></script>
