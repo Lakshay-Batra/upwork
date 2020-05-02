@@ -1,10 +1,8 @@
-html {
-    min-height: 100%;
-    margin: 0;
-}
-
-body {
+html,body {
     text-align: center;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -168,4 +166,31 @@ div.tab-content {
 
 .feed-profile-logo {
     border-radius: 50%;
+}
+
+/******************************************** client-dashboard *****************************************************/
+
+.teal {
+    color: teal;
+}
+
+.card-client-dashboard {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.card-header-client-dashboard {
+    border-radius: 10px 10px 0 0;
+}
+
+.card-client-dashboard:hover {
+    background-color: rgb(238, 237, 237);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.top-container-client-dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 83%;
+    padding-top: 1%;
 }
