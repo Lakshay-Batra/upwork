@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
 }
 
@@ -141,4 +141,17 @@ div.tab-content {
 .card-header {
     background-color: rgb(46, 157, 248);
     color: white;
+}
+.modal-header {
+    background-color: rgb(46, 157, 248);
+    color: white;
+}
+.profile-photo-container {
+    width: 200px;
+    height: 200px;
+    
+}
+.profile-photo-container img {
+    width: 100%;
+    border-radius: 50%;
 }
