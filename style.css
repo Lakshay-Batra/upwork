@@ -1,157 +1,169 @@
 html {
-    min-height: 100%;
-    margin: 0;
+	min-height: 100%;
+	margin: 0;
 }
 
 body {
-    text-align: center;
-    margin: 0;
+	text-align: center;
+	margin: 0;
 }
 
 hr.green {
-    width: 10%;
-    border-style: none;
-    border-top-style: dotted;
-    border-width: 0.8rem;
-    border-color: teal;
+	width: 10%;
+	border-style: none;
+	border-top-style: dotted;
+	border-width: 0.8rem;
+	border-color: teal;
 }
 
 .welcome-title {
-    /*min-height: 300px;*/
-    color: white;
-    font-weight: bold;
-    text-align: left;
-    background: url(images/header-background.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 7% 0 7% 3%;
+	/*min-height: 300px;*/
+	color: white;
+	font-weight: bold;
+	text-align: left;
+	background: url(images/header-background.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 7% 0 7% 3%;
 }
 
+
+
+
 .green {
-    color: teal;
-    line-height: 1.5;
+	color: teal;
+	line-height: 1.5;
 }
 
 .category-container {
-    padding: 1%;
+	padding: 1%;
 }
 
 .category-card {
-    padding: 0 4% 4%;
+	padding: 0 4% 4%;
 }
 
 .category-card p {
-    font-size: smaller;
+	font-size: smaller;
 }
 
 .category-card .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .category-card .card:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .footer {
-    color: white;
-    background-color: #363636;
-    margin-bottom: 0;
-    padding-bottom: 1%;
+	color: white;
+	background-color: #363636;
+	margin-bottom: 0;
+	padding-bottom: 1%;
 }
 
 .footer-top {
-    background-color: #323232;
-    padding: 3%;
-    margin: 2% 0;
+	background-color: #323232;
+	padding: 3%;
+	margin: 2% 0;
 }
 
 .footer-icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 2%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 2%;
 }
 
 .footer a {
-    color: white;
+	color: white;
 }
 
 .footer a:hover {
-    text-decoration: none;
-    text-shadow: 1px 1px 2px white;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px white;
 }
 
 @media (max-width: 700px) {
-    h1 {
-        font-size: large;
-    }
-    h6 {
-        font-size: small;
-    }
+	h1 {
+		font-size: large;
+	}
+
+	h6 {
+		font-size: small;
+	}
 }
 
 /* create-your-profile */
 
 .option-logo div {
-    width: 100%;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+	width: 100%;
+	height: 5px;
+	background-color: black;
+	margin: 6px 0;
 }
 
 .option-logo:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
+
 .option-logo {
-    width: 38px;
-    background-color: whitesmoke;
-    border-radius: 2px;
-    padding: 1px 5px;
-    margin: 0.5% 0 0 0.5%;
+	width: 38px;
+	background-color: whitesmoke;
+	border-radius: 2px;
+	padding: 1px 5px;
+	margin: 0.5% 0 0 0.5%;
 }
+
 .box {
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+	max-width: 400px;
+	margin: 50px auto;
+	background: white;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
 /* create-your-profile */
 .create-your-profile-body {
-    background-color: #f7f7f7;
-    background-image: -webkit-linear-gradient(75deg, #323232 50%, #f7f7f7 50%);
-    margin: 0;
+	background-color: #f7f7f7;
+	background-image: -webkit-linear-gradient(75deg, #323232 50%, #f7f7f7 50%);
+	margin: 0;
 }
 
 .heading {
-    padding: 2% 0;
-    margin: 0;
+	padding: 2% 0;
+	margin: 0;
 }
+
 .heading div {
-    background-color:rgb(46, 157, 248);
-    border-radius: 10px;
-    color: white;
+	background-color: rgb(46, 157, 248);
+	border-radius: 10px;
+	color: white;
 }
+
 div.tab-content {
-    margin: 0;
+	margin: 0;
 }
+
 .card-header {
-    background-color: rgb(46, 157, 248);
-    color: white;
+	background-color: rgb(46, 157, 248);
+	color: white;
 }
+
 .modal-header {
-    background-color: rgb(46, 157, 248);
-    color: white;
+	background-color: rgb(46, 157, 248);
+	color: white;
 }
+
 .profile-photo-container {
-    width: 200px;
-    height: 200px;
-    
+	width: 200px;
+	height: 200px;
+
 }
+
 .profile-photo-container img {
-    width: 100%;
-    border-radius: 50%;
+	width: 100%;
+	border-radius: 50%;
 }

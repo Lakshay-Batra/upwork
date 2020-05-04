@@ -4,6 +4,7 @@ $("#save-btn-past-experience").on("click", () => {
     $("#past-experience").append("<h6><b>Company</b>: " + company + " | <b>Title:</b> " + title + "</h6>");
     $('#exampleModalLong').modal('hide');
 });
+
 $("#add-language").on("click", () => {
     $("#languages-column").append("<div class='input-group'><select class='form-control'><option value=''>Select Language</option><option value='hindi'>Hindi</option><option value='punjabi'>Punjabi</option><option value='bengoli'>Bengoli</option></select><select class='form-control'><option value=''>Select Proficiency</option><option value='basic'>Basic</option><option value='conversational'>Converstaionsal</option><option value='fluent'>Fluent</option></select></ div>")
 });

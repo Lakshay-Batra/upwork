@@ -36,17 +36,20 @@ if(ifItIsMethod('post'))
 //				mysqli_stmt_close($stmt);
 				
 				
-				$mail = new PHPMailer;
+				$mail = new PHPMailer();
 				
 		                   
 				$mail->isSMTP();                                            
-				$mail->Host       = config::SMTP_HOST;                    
-				$mail->SMTPAuth   = true;                                  
+				$mail->Host       = config::SMTP_HOST;  
+				
+				$mail->SMTPAuth   = true;  
+				$mail->SMTPSecure = 'tls';
+				$mail->Port       = config::SMTP_PORT;
 				$mail->Username   = config::SMTP_USER;                    
 				$mail->Password   = config::SMTP_PASSWORD;                
-				$mail->SMTPSecure = 'tls';    							 
-				$mail->Port       = config::SMTP_PORT;      				
-				$mail->isHTML(true);			
+				    							 
+				      				
+							
 				
 				
 				$mail->setFrom('debarshimondal121@gmail.com', 'Debarshi');
@@ -56,7 +59,7 @@ if(ifItIsMethod('post'))
 				$mail->Subject = "This is a Test mail";
 				$mail->Body = '<p>Please Click to Reset your password
 					
-					<a href="http://localhost/Project-INIESTA/reset.php?email='.$email.'&token='.$token.'">http://localhost:8888/Project-INIESTA/reset.php?email='.$email.'&token='.$token.' </a>
+					<a href="http://localhost/Project-INIESTA/reset.php?email='.$email.'&token='.$token.' ">http://localhost:8888/reset.php?email='.$email.'&token='.$token.' </a>
 					
 				</p>';	
 				

@@ -1,5 +1,6 @@
 <?php include "DB.php"; ?>
 <?php
+$verify = true;
 
 if(isset($_POST['submit']))
 {
@@ -7,24 +8,30 @@ if(isset($_POST['submit']))
 	$last = $_POST['lastname'];
 	$password = $_POST['password'];
 	$email = $_POST['email'];
-	
+	if($_POST['optradio'] == 'Client')
+	{
+		$user_role = 'Client';
+	}
+	else
+	{
+		$user_role = 'Freelancer';
+	}
+	$verify = false;
 	$firstname = mysqli_real_escape_string($connection,$first);
 	$lastname = mysqli_real_escape_string($connection,$last);
 	
-	$query = "INSERT INTO regestration(firstname,lastname,user_password,user_email) ";
-	$query .= "VALUES('$firstname','$lastname','$password','$email')";
+	$query ="INSERT INTO regestration(firstname,lastname,user_password,user_email,user_role)";
+	$query .="VALUES('$firstname','$lastname','$password','$email','$user_role')";
+	
+	
 	
 	$result_query = mysqli_query($connection,$query);
 	if(!$result_query)
 	{
 		die("Connection Intrupted!".mysqli_error($connection));
 	}
-	if($email)
-	{
-		echo "<script> alert('Now Log In')</script>";
-		
-	}
 }
+
 
 
 
@@ -34,6 +41,7 @@ if(isset($_POST['submit']))
 
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,6 +51,7 @@ if(isset($_POST['submit']))
 	<title>Register as Student</title>
 
 	<link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/sign-in/">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -81,6 +90,7 @@ if(isset($_POST['submit']))
 </head>
 
 <body class="text-center">
+	<?php if($verify): ?>
 	<form class="form-signin" action="register.php" method="post">
 		<!-- <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
 		<h1 class="h3 mb-3 font-weight-normal"><i class="fas fa-level-up-alt"></i> Register Here </h1>
@@ -89,12 +99,54 @@ if(isset($_POST['submit']))
 		<input type="email" class="form-control" placeholder="Email address" required name="email">
 
 		<input type="password" class="form-control" placeholder="Password" required name="password">
+		<p>What's your Role?</p>
+		<div class="form-check" style="font-size:20px; margin-bottom:10px;">
+			<label class="radio-inline" style="margin-left: -10px;"><input type="radio" name="optradio" value="Client" checked> Client </label>
+			<label class="radio-inline" style="margin-left: 20px;"><input type="radio" name="optradio" value="Freelancer"> Freelancer </label>
+		</div>
+		
+		<div class="checkbox" style="float:left;">
+			<label><input type="checkbox" value="" required> Accept Our <a href="">Terms and Conditions</a> </label>
+		</div>
+
 		<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Register</button>
-		<p>or</p>
-		<button class="btn btn-dark btn-lg btn-block"><i class="fab fa-google"></i> Signup with google</button><br>
+		<br>
 		<p><a href="index.php">Already have an account ? Log in ></a></p>
 		<p class="mt-5 mb-3 text-muted">&copy; Iniesta 2020</p>
 	</form>
+	<?php else: ?>
+
+	<style>
+		.container {
+			border: 1px solid black;
+			padding: 20px;
+			width: 50%;
+		}
+
+		h4 {
+			font-size: 1.8em;
+			font-weight: bold;
+			font-family: 'Source Sans Pro', sans-serif;
+			word-spacing: 5px;
+		}
+
+		h4>span {
+			font-style: italic;
+			letter-spacing: 1px;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: chocolate;
+		}
+	</style>
+	<div class="container" style="text-algin:center;">
+		<p style="color: green; font-size: 1em;"> <span style="color: black; word-spacing:5px;"> Thankyou! </span> Regestration Succesfully Done. </p>
+		<br>
+		<h4> Registered as <span><?php echo $user_role; ?></span></h4>
+		<br>
+		<a href="index.php">Back To Login</a>
+	</div>
+
+
+	<?php endIf; ?>
 </body>
 
 </html>
