@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Jobs</title>
+    <title>Profile</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -12,9 +12,24 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
+<style>
+    body {
+        background-color: rgba(236, 231, 231, 0.897);
+    }
+    .container-tab {
+        padding: 2% 2% 0.5%;
+        border-radius: 0 0 50px 50px;
+    }
+    .card-header {
+        background-color: rgb(30, 36, 43);
+    }
+    .card {
+        box-shadow: 2px 2px 4px 4px grey;
+    }
+</style>
 </head>
 
-<body class="bg-light text-left">
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292b2c;">
         <a class="navbar-brand" style="color: teal; font-weight: bold;" href="#"><img src="images/iniesta-logo.jpg"
@@ -26,7 +41,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link">Post Jobs</a>
+                    <a href="client-dashboard.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item dropdown trainings">
                     <a href="" class="nav-link">Report</a>
@@ -42,34 +57,215 @@
         </div>
     </nav>
 
-    <div class="container top-container-client-dashboard">
-        <div class="text-right mb-5 mt-3">
-            <a href="client-dashboard.html" class="btn btn-info">Post a Job</a>
-            &nbsp;&nbsp;
-            <a href="" class="btn btn-secondary text-light">Rehire a freelancer</a>
+    <!-- side navigation or off-canvas Menu -->
+    <div class="container-tab bg-light">
+        <ul id="myTab" class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" id="expertise-tab" data-toggle="tab" href="#Title" role="tab"
+                    aria-controls="expertise" aria-selected="true">Title</a>
+            </li>
+            <li class="nav-item">
+                <a id="1a" href="#Description" class="nav-link" data-toggle="tab" role="tab"
+                    aria-controls="expertise-level" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+                <a id="2a" href="#Details" class="nav-link" data-toggle="tab" role="tab" aria-controls="education"
+                    aria-selected="true">Details</a>
+            </li>
+            <li class="nav-item">
+                <a id="3a" href="#Expertize" class="nav-link" data-toggle="tab" role="tab" aria-controls="employment"
+                    aria-selected="true">Expertise</a>
+            </li>
+            <li class="nav-item">
+                <a id="4a" href="#Visibility" class="nav-link" data-toggle="tab" role="tab" aria-controls="languages"
+                    aria-selected="true">Visibility</a>
+            </li>
+            <li class="nav-item">
+                <a id="5a" href="#Budget" class="nav-link" data-toggle="tab" role="tab" aria-controls="hourly-rate"
+                    aria-selected="true">Budget</a>
+            </li>
+        </ul>
+    </div>
+    <div class="heading row justify-content-md-center">
+        <div class="col-md-5 bg-dark">
+            <h1>Job Specification</h1>
         </div>
-        <div class="row justify-content-md-center">
-            <div class="col-md-6">
-                <div class="card text-center card-client-dashboard">
-                    <div class="card-header bg-dark text-light card-header-client-dashboard" style="border-radius: 10px 10px 0 0;">
-                        My Job Postings
+    </div>
+    <div class="tab-content row justify-content-md-center" id="myTabContent">
+        <!-- 1 -->
+        <div class="tab-pane fade show active col-md-6" id="Title" role="tabpanel" aria-labelledby="expertise-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    1 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <p class="card-text"><b>Enter the name of your job post.</b></p>
+                    <input type="text" class="form-control" placeholder="Enter name here">
+                    <br>
+                    <p class="card-text"><select class="custom-select" name="" id="">
+                            <option value="">Please Select a Category</option>
+                            <option value="Accounting & Consulting">Accounting & Consulting</option>
+                            <option value="Admin Support">Admin Support</option>
+                            <option value="Customer Service">Customer Service</option>
+                            <option value="Data Science and Analytics">Data Science and Analytics</option>
+                            <option value="Design & Creative">Design & Creative</option>
+                            <option value="Engineering & Architecture">Engineering & Architecture</option>
+                            <option value="IT & Networking">IT & Networking</option>
+                            <option value="Legal">Legal</option>
+                            <option value="Sales & Marketing">Sales & Marketing</option>
+                            <option value="Transiation">Transiation</option>
+                            <option value="Web & Mobile Development">Web & Mobile Development</option>
+                            <option value="Writing">Writing</option>
+                        </select></p>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="1" href="#Description" data-toggle="tab" role="tab" aria-controls="expertise-level"
+                            aria-selected="true" class="btn btn-primary">Next</a>
                     </div>
-                    <div class="card-body" style="padding: 10% 5%;">
-                        <a class="btn btn-secondary btn-lg btn-block" href="post-a-job.html">Post a Job</a>
-                        <br>
-                        <p class="card-text">
-                            <h5 class="teal"><b>Or use a job template to get started!</b></h5>
-                        </p>
-                        <br>
-                        <i class="fas fa-sign-in-alt fa-5x text-secondary"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="tab-pane fade col-md-6" id="Description" role="tabpanel" aria-labelledby="expertise-level-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    2 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Description</h5>
+                    <p class="card-text"><b>A good description includes:</b></p>
+                    <ul>
+                        <li> What the deliverable is</li>
+                        <li>Type of freelancer or agency you're looking for</li>
+                        <li>Anything unique about the project, team, or your company</li>
+                    </ul>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="2" class="btn btn-primary" href="#Details" data-toggle="tab" role="tab"
+                            aria-controls="education" aria-selected="true">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="tab-pane fade col-md-6" id="Details" role="tabpanel" aria-labelledby="education-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    3 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Details</h5>
+                    <p class="card-text">
+                        <b>What type of project do you have?</b>
+                        <select name="" id="" class="form-control">
+                            <option value="">Select the type of project</option>
+                            <option value="One-time">One-time Project</option>
+                            <option value="On-going">On-going Project</option>
+                            <option value="Complex">Complex Project</option>
+                        </select>
+                    </p>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="3" href="#Expertize" data-toggle="tab" role="tab" aria-controls="employment"
+                            aria-selected="true" class="btn btn-primary">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="tab-pane fade col-md-6" id="Expertize" role="tabpanel" aria-labelledby="employment-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    4 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Expertise</h5>
+                    <p class="card-text"><b>What skills and expertise are most important to you?</b></p>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="4" href="#Visibility" data-toggle="tab" role="tab" aria-controls="languages"
+                            aria-selected="true" class="btn btn-primary">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="tab-pane fade col-md-6" id="Visibility" role="tabpanel" aria-labelledby="languages-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    5 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Visibility</h5>
+                    <p class="card-text"><b>Who can see your job?</b>
+                        <select name="" id="" class="form-control">
+                            <option value=''>Select</option>
+                            <option value="anyone">Anyone</option>
+                            <option value="only-upwork-talent">Only Upwork Talent</option>
+                            <option value="invite-only">Invite Only</option>
+                        </select></p>
+                    <p><b>How many people do you need for this job?</b></p>
+                    <select name="" id="" class="form-control">
+                        <option value=''>Select</option>
+                        <option value="one">Only One Freelancer</option>
+                        <option value="more">More Than One Freelancer</option>
+                    </select>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="5" href="#Budget" data-toggle="tab" role="tab" aria-controls="hourly-rate"
+                            aria-selected="true" class="btn btn-primary">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="tab-pane fade col-md-6" id="Budget" role="tabpanel" aria-labelledby="hourly-rate-tab">
+            <div class="card" style="text-align: left;">
+                <div class="card-header">
+                    6 of 10
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Budget</h5>
+                    <p class="card-text"><b>How would you like to pay your freelancer or agency?</b>
+                        <select name="" id="" class="form-control">
+                            <option value="">Select</option>
+                            <option value="pay-by-the-hour">Pay by the hour</option>
+                            <option value="pay-a-fixed-price">Pay a fixed price</option>
+                        </select>
+                    </p>
+                    <p class="card-text"><b>What level of experience should your freelancer have?</b>
+                        <select name="" id="" class="form-control">
+                            <option value="">Select</option>
+                            <option value="entry">Entry</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </p>
+                    <p class="card-text"><b>How long do you expect this project to last?</b>
+                        <select name="" id="" class="form-control">
+                            <option value="">Select</option>
+                            <option value="1">Less than 1 month</option>
+                            <option value="1+">1 to 3 months</option>
+                            <option value="3+">3 to 6 months</option>
+                            <option value="6+">more than 6 months</option>
+                        </select>
+                    </p>
+                    <div style="text-align: right; padding-top: 3%;">
+                        <a id="6" href="#Title-Overview" data-toggle="tab" role="tab" aria-controls="title-overview"
+                            aria-selected="true" class="btn btn-primary">Next</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <!-- footer -->
-    <div class="footer">
+    <div class="footer text-center">
         <div class="footer-top row">
             <div class="col-lg-4">
                 <h5><u><b>Help for you</b></u></h5>
@@ -100,7 +296,7 @@
                 <h6>&copy; INIESTA 2020</h6>
             </a>
         </div>
-        
+
     </div>
     <!-- footer end -->
 
@@ -228,6 +424,8 @@
     </div>
 
 
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -239,7 +437,7 @@
         crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="create-your-profile.js"></script>
 </body>
 
 </html>
