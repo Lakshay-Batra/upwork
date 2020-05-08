@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upwork</title>
+    <title>Job Feed</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,152 +13,146 @@
 
     <script src="https://kit.fontawesome.com/18dd5346aa.js" crossorigin="anonymous"></script>
 
+    <style>
+        body {
+            min-height: 100%;
+            background-image: -webkit-linear-gradient(65deg, rgb(0, 0, 0), rgba(45, 168, 168, 0.658));
+        }
+
+        p {
+            padding-left: 2%;
+        }
+
+        .container {
+            border-radius: 5px;
+            min-height: 500px;
+            padding: 1%;
+            box-shadow: 2px 2px 9px -1px black;
+        }
+
+        .top-header {
+            border-radius: 110px 0 110px 0;
+            padding: 0.5% 13%;
+            margin-bottom: 1%;
+        }
+
+        .top-header a {
+            color: white;
+        }
+
+        .tab-content .card-header {
+            border-radius: 50px;
+        }
+
+        .card:hover {
+            background-color: rgb(242, 247, 246);
+        }
+
+        hr {
+            width: 95%;
+        }
+
+        @media (max-width: 788px) {
+            .description-header h4 {
+                font-size: medium;
+            }
+
+            .btn {
+                margin: 1%;
+            }
+
+            .description-header .col-md-6 {
+                padding-left: 1%;
+                padding-right: 1%;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="text-left">
 
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #292b2c;">
-        <a class="navbar-brand" style="color: teal; font-weight: bold;" href="#"><img
-                src="images/iniesta-logo.jpg" alt="iniesta-logo" style="border-radius: 5px;"> INIESTA Freelancing</a>
+        <a class="navbar-brand" style="color: teal; font-weight: bold;" href="#"><img src="images/iniesta-logo.jpg"
+                alt="iniesta-logo" style="border-radius: 5px;"> INIESTA Freelancing</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link">Solutions</a>
+                    <a href="freelancer-dashboard.html" class="nav-link">Find Work</a>
                 </li>
                 <li class="nav-item dropdown trainings">
-                    <a href="" class="nav-link">Post a job</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a href="register.html" class="nav-link">Register</a>
+                    <a href="" class="nav-link">My Jobs</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a type="button" class="nav-link" data-toggle="modal" data-target="#exampleModal">
-                        Login
-                    </a>
+                    <a class="nav-link" href="">Messages</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link">My Profile &nbsp; <img class="feed-profile-logo"
+                            src="images/feed-profile-logo.jpg" alt=""></a>
                 </li>
             </ul>
         </div>
     </nav>
-
-    <!-- Login modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form action="">
-                    <div class="modal-body">
-                        <input type="text" class="form-control" placeholder="Username"><br>
-                        <input type="password" class="form-control" placeholder="Password">
-                        <div style="text-align: right;">
-                            <a href="">Forget password?</a>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-info" onclick="window.location.href='create-your-profile.html'">Login</button>
-                    </div>
-                </form>
+    <!----------------------------------------------------------Body-------------------------------------------------->
+    <div class="container bg-light mt-4">
+        <div class="description-header row text-center" style="margin: 0;">
+            <div class="col-md-6">
+                <h4 class="text-secondary" style="line-height: 1.5"><b>Company Name </b>| Job Title | Category</h4>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-dark">Submit a Proposal</button>
+                <button class="btn btn-light border-dark">🤍 Save Job</button>
             </div>
         </div>
-    </div>
-    <!-- Login modal end -->
-
-    <div class="welcome-title">
-        <h1>In-demand talent on demand&#8482;</h1>
-        <h1 class="green">INIESTA-Freelancing is how.</h1>
-        <h6>INIESTA-Freelancing expertly connects professionals and agencies to businesses seeking specialized talent.
-        </h6>
-    </div>
-
-    <!-- <hr class="green"> -->
-
-    <div class="container-fluid body-section" style="padding-top: 4%;">
-        <h1 style="color: teal; text-shadow: 1px 1px 2px grey; line-height: 2;">Find quality talent and agencies</h1>
-        <div class="category-container row">
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Web,Mobile&SoftwareDev.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Mobile & Website dev</p>
-                    </div>
-                </div>
+        <hr>
+        <p class="text-muted text-right" style="margin: 0;">Posted May 8, 2020</p>
+        <p><b class="text-info">FULL STACK WEB DEVELOPMENT</b><br>
+            Specialised profiles can help you better highlight your expertise when submitting proposals to
+            these!<br><br>
+            <b class="text-info">Job Description</b><br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et eos, error veritatis architecto velit esse
+            exercitationem laudantium natus autem est dolore, beatae, consectetur aspernatur modi ratione? Repellat a
+            aliquid numquam? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati enim similique aliquam
+            autem dolorem magni velit sint eum perspiciatis? Beatae maxime quidem quae id consectetur modi sunt nobis
+            ullam enim. <br><br>
+            <b class="text-info">Expertise Required</b><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ut, nemo quibusdam temporibus error dolorem
+            aspernatur id delectus voluptate nulla repellendus eos, laborum debitis, tempora nam est at minima soluta.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi debitis est placeat fugit nam nesciunt
+            accusamus recusandae rem, soluta, praesentium aperiam. Autem ratione blanditiis harum dolorem ipsa, dolor
+            reiciendis fuga.</p>
+        <hr>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <b class="text-info"><i class="far fa-clock"></i> More than 30 hrs/week</b><br>
+                <span class="text-muted">Hourly</span>
             </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Writing.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Writing</p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <b class="text-info"><i class="far fa-calendar-alt"></i> 1 to 3 Months</b><br>
+                <span class="text-muted">Project length</span>
             </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Sales&Marketing.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Sale & Marketing</p>
-                    </div>
-                </div>
-            </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Engineering&Architecture.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Engineering & Architecture</p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <b class="text-info"><i class="fas fa-star-half-alt"></i> Intermediate Level</b><br>
+                <span class="text-muted">Expertise level</span>
             </div>
         </div>
-        <div class="category-container row">
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Design&Creative.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Design & Creative</p>
-                    </div>
-                </div>
-            </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/DataScience&Analytics.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>DataScience & Analytics</p>
-                    </div>
-                </div>
-            </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/CustomerService.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Customer Service</p>
-                    </div>
-                </div>
-            </div>
-            <div class="category-card col-md-3">
-                <div class="card">
-                    <img src="images/Admin Support.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p>Admin Support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <hr>
+        <p class="text-light"><b class="text-info">Skills Required :</b> <span class="bg-secondary"
+                style="padding: 0.5%; border-radius: 2px;">HTML</span>&nbsp;&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0.5% 1%; border-radius: 2px;">Css</span>&nbsp;&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0.5%; border-radius: 2px;">Bootstrap</span>&nbsp;&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0.5%; border-radius: 2px;">React</span>&nbsp;&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0.5% 1%; border-radius: 2px;">Node.js</span>&nbsp;&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0.5%; border-radius: 2px;">MongoDB</span><br><br>
+            <b class="text-info">Required connects : </b>&nbsp;&nbsp;<span class="bg-secondary"
+                style="padding: 0% 2%; border-radius: 50px 0 50px 0">10</span></p>
+            <hr>
+            <p class="text-center" style="font-weight: bold;"><i class="far fa-check-circle text-success"></i> Payment Method Verified</p>
     </div>
-
-
-
-
+    <!----------------------------------------------------------Body-------------------------------------------------->
 
     <!-- footer -->
     <div class="footer text-center">
@@ -187,9 +181,12 @@
                     class="fab fa-linkedin fa-2x"></i></a>
             <a href="https://www.instagram.com/iniestawebtech/"><i class="fab fa-instagram fa-2x"></i></a>
         </div>
-        <a href="">
-            <h6>&copy; INIESTA 2020</h6>
-        </a>
+        <div class="text-center">
+            <a href="">
+                <h6>&copy; INIESTA 2020</h6>
+            </a>
+        </div>
+
     </div>
     <!-- footer end -->
 
@@ -291,13 +288,13 @@
                         Fast-forward to today, that technology is that the foundation of Iniesta — the most important
                         global freelancing website. With countless jobs posted on Iniesta annually, freelancers are
                         earning money by providing companies with over 5,000 skills across over 70 categories of labor.
-<br>
-                       <b>A world of opportunities</b><br>
+                        <br>
+                        <b>A world of opportunities</b><br>
                         Through Iniesta businesses get more done, connecting with freelancers to figure on projects from
                         web and mobile app development to SEO, social media marketing, content writing, graphic design,
                         admin help and thousands of other projects. Iniesta makes it fast, simple, and cost-effective to
                         seek out, hire, work with, and pay the most effective professionals anywhere, any time.
-<br>
+                        <br>
                         <b>Iniesta’s vision</b> <br>
                         To be the number one flexible talent solution in the world. <br>
                         <b>Iniesta's mission</b><br>
@@ -315,8 +312,6 @@
             </div>
         </div>
     </div>
-
-
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
